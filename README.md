@@ -23,7 +23,7 @@ Code coming soon...
 
 
 ## References and Acknowledgements
-```
+```BibTeX
 @article{elata2023nested,
   title={Nested Diffusion Processes for Anytime Image Generation},
   author={Elata, Noam and Kawar, Bahjat and Michaeli, Tomer and Elad, Michael},
