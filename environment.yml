@@ -1,0 +1,35 @@
+name: nested-diffusion
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - mamba
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.7
+  - tensorflow
+  - tqdm
+  - pyyaml
+  - tensorboard
+  - tensorboardx
+  - ca-certificates
+  - certifi
+  - openssl
+  - pip
+  - pip:
+      - accelerate==0.19.0
+      - diffusers==0.16.1
+      - fsspec==2023.5.0
+      - huggingface-hub==0.14.1
+      - psutil==5.9.5
+      - regex==2023.5.5
+      - safetensors==0.3.1
+      - timm==0.9.2
+      - tokenizers==0.13.3
+      - transformers==4.29.2
+
+
