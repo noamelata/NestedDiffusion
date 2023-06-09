@@ -3,6 +3,8 @@
 
 <img src="figures/Nested_Egg.png" alt="Nested Diffusion" style="width:256px;"/>
 
+🤗  [`Huggingface Demo`](https://huggingface.co/spaces/noamelata/Nested-Diffusion) 
+
 ## Sampling from Nested Stable Diffusion
 This code implements <a href="https://arxiv.org/abs/2305.19066">Nested Diffusion</a>, used with Stable Diffusion v1-5 and the <a href="https://github.com/huggingface/diffusers"> Diffusers library</a>.
 
