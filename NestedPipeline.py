@@ -9,9 +9,7 @@ from diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion import Stabl
 
 from diffusers.pipelines.stable_diffusion import StableDiffusionPipelineOutput
 
-from NestedScheduler import NestedScheduler
-
-
+from NestedScheduler import NestedScheduler, NestedDPMSolverSinglestepScheduler
 
 
 class NestedStableDiffusionPipeline(StableDiffusionPipeline):
@@ -63,6 +61,7 @@ class NestedStableDiffusionPipeline(StableDiffusionPipeline):
         negative_prompt: Optional[Union[str, List[str]]] = None,
         num_images_per_prompt: Optional[int] = 1,
         eta: float = 0.0,
+        inner_scheduler: str = "DDIM",
         inner_eta: float = 0.85,
         generator: Optional[Union[torch.Generator, List[torch.Generator]]] = None,
         latents: Optional[torch.FloatTensor] = None,
@@ -103,6 +102,8 @@ class NestedStableDiffusionPipeline(StableDiffusionPipeline):
                 The number of images to generate per prompt.
             eta (`float`, *optional*, defaults to 0.0):
                 Corresponds to parameter eta (η) in the outer diffusion process
+            inner_scheduler (`str`, *optional*, defaults to 'DDIM'):
+                The scheduler to use for the inner diffusion process
             inner_eta (`float`, *optional*, defaults to 0.85):
                 Corresponds to parameter eta (η) in the inner diffusion process
             generator (`torch.Generator` or `List[torch.Generator]`, *optional*):
@@ -207,9 +208,13 @@ class NestedStableDiffusionPipeline(StableDiffusionPipeline):
             # running the outer diffusion procees
             for i, t in enumerate(timesteps):
                 # creating the inner diffusion process
-                self.inner_scheduler = NestedScheduler(beta_start=0.00085, beta_end=0.012,
+                if inner_scheduler == "DDIM":
+                    self.inner_scheduler = NestedScheduler(beta_start=0.00085, beta_end=0.012,
                                                        beta_schedule="scaled_linear", clip_sample=False,
                                                        set_alpha_to_one=False, thresholding=False)
+                elif inner_scheduler == "DPMSolver":
+                    self.inner_scheduler = NestedDPMSolverSinglestepScheduler(beta_start=0.00085, beta_end=0.012,
+                                                                              beta_schedule="scaled_linear")
                 self.inner_scheduler.set_timesteps(num_inner_steps, max_timestep=t.item(), device=device)
                 inner_timesteps = self.inner_scheduler.timesteps
                 latents = outer_latents.clone()
