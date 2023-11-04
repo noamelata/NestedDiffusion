@@ -3,7 +3,7 @@
 
 <img src="figures/generation.gif" alt="Nested Diffusion" style="width:1500px;"/>
 
-🔗 [`Project Webpage`](https://noamelata.github.io/NestedDiffusion/)  | 🤗  [`Huggingface Demo`](https://huggingface.co/spaces/noamelata/Nested-Diffusion) | <img src="figures/arxiv.svg" style="width:14px;">  [`ArXiv`](https://huggingface.co/spaces/noamelata/Nested-Diffusion)
+🔗 [`Project Webpage`](https://noamelata.github.io/NestedDiffusion/)  | 🤗  [`Huggingface Demo`](https://huggingface.co/spaces/noamelata/Nested-Diffusion) | <img src="figures/arxiv.svg" style="width:14px;">  [`ArXiv`](https://arxiv.org/abs/2305.19066)
 
 ## Preparation
 
