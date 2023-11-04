@@ -1,9 +1,9 @@
 # Nested Diffusion Processes for Anytime Image Generation
-<a href="https://github.com/noamelata">Noam Elata</a>, <a href="https://bahjat-kawar.github.io/">Bahjat Kawar</a>, <a href="https://tomer.net.technion.ac.il/">Tomer Michaeli</a>, and <a href="https://elad.cs.technion.ac.il/">Michael Elad</a>, Technion.<br />
+<a href="https://noamelata.github.io/">Noam Elata</a>, <a href="https://bahjat-kawar.github.io/">Bahjat Kawar</a>, <a href="https://tomer.net.technion.ac.il/">Tomer Michaeli</a>, and <a href="https://elad.cs.technion.ac.il/">Michael Elad</a>, Technion - Israel Institute of Technology.<br />
 
-<img src="figures/Nested_Egg.png" alt="Nested Diffusion" style="width:256px;"/>
+<img src="figures/generation.gif" alt="Nested Diffusion" style="width:1500px;"/>
 
-🤗  [`Huggingface Demo`](https://huggingface.co/spaces/noamelata/Nested-Diffusion) 
+🔗 [`Project Webpage`](https://noamelata.github.io/NestedDiffusion/)  | 🤗  [`Huggingface Demo`](https://huggingface.co/spaces/noamelata/Nested-Diffusion) | <img src="figures/arxiv.svg" style="width:14px;">  [`ArXiv`](https://huggingface.co/spaces/noamelata/Nested-Diffusion)
 
 ## Preparation
 
