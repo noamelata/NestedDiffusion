@@ -50,10 +50,12 @@ For multi-GPU sampling or ddim sampling,  please see the usage of `generate_imag
 
 ## References and Acknowledgements
 ```BibTeX
-@article{elata2023nested,
-  title={Nested Diffusion Processes for Anytime Image Generation},
-  author={Elata, Noam and Kawar, Bahjat and Michaeli, Tomer and Elad, Michael},
-  journal={arXiv preprint arXiv:2305.19066},
-  year={2023}
+@InProceedings{Elata_2024_WACV,
+    author    = {Elata, Noam and Kawar, Bahjat and Michaeli, Tomer and Elad, Michael},
+    title     = {Nested Diffusion Processes for Anytime Image Generation},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2024},
+    pages     = {5018-5027}
 }
 ```
